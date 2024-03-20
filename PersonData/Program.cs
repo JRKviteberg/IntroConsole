@@ -10,5 +10,11 @@ Person p2 = new()
     LastName = "Magnussen"
 };
 
+// Opprette instans/objekt
+Demo d = new()
+{
+    DemoNumber = 12
+};
+
 Console.WriteLine($"FirstName: {p.FirstName}, LastName: {p.LastName}");
 Console.WriteLine(p2);
