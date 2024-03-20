@@ -20,8 +20,11 @@ public static class CSVReader
             string? header = reader.ReadLine();
             while (!reader.EndOfStream)
             {
-                
+                string[]? arr = reader.ReadLine()?.Split(",");
+                if (arr is not null)
+                    csvList.Add(arr);
             }
+            return csvList;
         }
         // catch (IOException ioEx) {}
         catch (Exception e)
@@ -31,7 +34,7 @@ public static class CSVReader
             throw;
         }
 
-        return csvList;
+        
     }
     
 }
